@@ -7,12 +7,14 @@ import { MainComponent } from './main/main.component';
 import { DetailComponent } from './detail/detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SwServiceService } from './services/sw-service.service';
+import { ListComponent } from './list/list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    DetailComponent
+    DetailComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
