@@ -1,4 +1,4 @@
-<p>
-  {{ data | json }}
-  {{ data | json }}
-</p>
+<div *ngFor="let item of categories | keyvalue" style="display:block;">
+  {{ item.key }}
+  <a [routerLink]="item.value">click</a>
+</div>

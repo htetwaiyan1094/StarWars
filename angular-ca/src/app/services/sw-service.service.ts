@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
+import * as Consts from '../constants';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class SwServiceService {
 
+export class SwServiceService {
+  
   constructor(private client: HttpClient) { }
 
-  public getRoot(): Observable<any> {
-    return this.client.get('https://swapi.co/api/');
+  public getData(category: String): Observable<any> {
+    return this.client.get(`${Consts.ROOT_URL}${category}`);
   }
 }
