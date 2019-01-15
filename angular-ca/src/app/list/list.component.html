@@ -1,6 +1,8 @@
 <a routerLink="test">Testing</a>
 <div *ngFor="let item of itemList">
-  <img src="{{item.imageUrl}}" />
+  <a href="{{item.link}}">
+    <img src="{{item.imageUrl}}" />
+  </a>
 </div>
 
 <style scoped>

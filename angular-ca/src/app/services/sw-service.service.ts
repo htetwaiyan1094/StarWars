@@ -11,7 +11,13 @@ export class SwServiceService {
   
   constructor(private client: HttpClient) { }
 
-  public getData(category: String): Observable<any> {
-    return this.client.get(`${Consts.ROOT_URL}${category}`);
+  public getData(appendedUrl: String): Observable<any> {
+    return this.client.get(`${Consts.ROOT_URL}${appendedUrl}`);
   }
+}
+
+export class RelatedItem {
+  itemName: string;
+  imageUrl?: string;
+  link?: string;
 }

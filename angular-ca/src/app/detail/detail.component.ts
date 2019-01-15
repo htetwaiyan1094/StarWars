@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
+import { SwServiceService, RelatedItem } from '../services/sw-service.service';
+import { ActivatedRoute } from '@angular/router';
+import { observe } from 'rxjs-observe';
+import * as Consts from '../constants';
 
 @Component({
   selector: 'app-detail',
@@ -6,10 +10,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
+  details: any = {};
+  relatedItems: RelatedItem[] = [];
 
-  constructor() { }
+  constructor(private swapi: SwServiceService, private route: ActivatedRoute, private ngZone: NgZone) { }
 
   ngOnInit() {
+    const category = this.route.snapshot.paramMap.get('type');
+    const id = this.route.snapshot.paramMap.get('id');
+    const observeObj = observe(this.details);
+
+    this.getItemDetails(category, id);
+  }
+
+  getItemDetails(category: string, id: string) {
+    this.swapi.getData(`${category}/${id}`)
+      .subscribe(resp => {
+        this.details = resp;
+        this.details.characters.forEach(url => {
+          this.pushRelatedItem(url.replace(Consts.ROOT_URL, ''));
+        });
+      });
+  }
+
+  pushRelatedItem(url: string): void {
+    this.swapi.getData(url)
+      .subscribe(resp => {
+        this.relatedItems.push({
+          itemName: resp.name || resp.title
+        });
+      });
   }
 
 }

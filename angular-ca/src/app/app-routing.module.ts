@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { ListComponent } from './list/list.component';
+import { DetailComponent } from './detail/detail.component';
 
 const routes: Routes = [
-  { path: '', component: MainComponent },
-  { path: ':type', component: ListComponent },
-  { path: ':type/:id', component: MainComponent },
+  { path: 'sw', component: MainComponent },
+  { path: 'sw/:type', component: ListComponent },
+  { path: 'sw/:type/:id', component: DetailComponent },
+  { path: '**', redirectTo: 'sw', pathMatch: 'full' }
 ];
 
 @NgModule({

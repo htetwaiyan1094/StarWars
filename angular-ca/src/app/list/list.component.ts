@@ -25,9 +25,16 @@ export class ListComponent implements OnInit {
         resp.results.forEach(item => {
           let tempUrl = item['url']
             .substring(0, (item['url'].length-1))
-            .replace(Consts.ROOT_URL, Consts.IMAGE_URL)
             .replace('people', 'characters');
-          item = Object.assign(item, { imageUrl : `${tempUrl}.jpg`});
+
+          let tempImgUrl = tempUrl.replace(Consts.ROOT_URL, Consts.IMAGE_URL);
+
+          item = Object.assign(item,
+            { 
+              imageUrl: `${ tempImgUrl }.jpg`,
+              link: `${ item['url'].replace(Consts.ROOT_URL, `${ location.origin }/sw/`) }`
+            }
+          );
         });
         this.itemList = resp.results;
       });
