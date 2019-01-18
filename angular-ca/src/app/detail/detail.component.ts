@@ -12,13 +12,13 @@ import * as Consts from '../constants';
 export class DetailComponent implements OnInit {
   details: any = {};
   relatedItems: RelatedItem[] = [];
+  totalPages: number = 5;
 
   constructor(private swapi: SwServiceService, private route: ActivatedRoute, private ngZone: NgZone) { }
 
   ngOnInit() {
     const category = this.route.snapshot.paramMap.get('type');
     const id = this.route.snapshot.paramMap.get('id');
-    const observeObj = observe(this.details);
 
     this.getItemDetails(category, id);
   }
@@ -42,4 +42,15 @@ export class DetailComponent implements OnInit {
       });
   }
 
+  getPaging() {
+    let paging = Array(this.totalPages)
+      .fill(0)
+      .map((item, index) => item = index + 1);
+
+    return paging;
+  }
+
+  click(page: number) {
+    console.log(page);
+  } 
 }

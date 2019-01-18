@@ -2,4 +2,12 @@
   {{ item.key | titlecase }} >>> {{ item.value | json }}
 </p> -->
 
-<p style="background-color: red;">{{ relatedItems | json }}</p>
+<!-- <p style="background-color: red;">{{ relatedItems | json }}</p> -->
+
+<button mat-stroked-button *ngFor="let item of getPaging()" color="primary" (click)="click(item)">{{ item }}</button>
+
+<style scoped>
+.mat-stroked-button {
+  padding: 0;
+}
+</style>
