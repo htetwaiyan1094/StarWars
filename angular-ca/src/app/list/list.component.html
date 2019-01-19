@@ -1,3 +1,9 @@
+<mat-button-toggle-group name="paginator">
+  <mat-button-toggle *ngFor="let page of getPaging()" 
+  style="min-width:48px;" class="mat-primary"
+  (click)="click(page)">{{page}}</mat-button-toggle>
+</mat-button-toggle-group>
+
 <a routerLink="test">Testing</a>
 <div *ngFor="let item of itemList">
   <a href="{{item.link}}">

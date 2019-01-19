@@ -1,4 +1,3 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -9,8 +8,7 @@ import { DetailComponent } from './detail/detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SwServiceService } from './services/sw-service.service';
 import { ListComponent } from './list/list.component';
-import { MatRippleModule, MatButtonModule } from '@angular/material';
-import { OverlayModule } from '@angular/cdk/overlay';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -20,11 +18,10 @@ import { OverlayModule } from '@angular/cdk/overlay';
     ListComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatButtonModule, MatRippleModule, OverlayModule
+    MaterialModule
   ],
   providers: [SwServiceService],
   bootstrap: [AppComponent]

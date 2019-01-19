@@ -12,7 +12,6 @@ import * as Consts from '../constants';
 export class DetailComponent implements OnInit {
   details: any = {};
   relatedItems: RelatedItem[] = [];
-  totalPages: number = 5;
 
   constructor(private swapi: SwServiceService, private route: ActivatedRoute, private ngZone: NgZone) { }
 
@@ -25,9 +24,10 @@ export class DetailComponent implements OnInit {
 
   getItemDetails(category: string, id: string) {
     this.swapi.getData(`${category}/${id}`)
-      .subscribe(resp => {
+      .then(resp => {
         this.details = resp;
-        this.details.characters.forEach(url => {
+        let people = resp.characters || resp.residents || resp.people;
+        people.forEach(url => {
           this.pushRelatedItem(url.replace(Consts.ROOT_URL, ''));
         });
       });
@@ -35,22 +35,10 @@ export class DetailComponent implements OnInit {
 
   pushRelatedItem(url: string): void {
     this.swapi.getData(url)
-      .subscribe(resp => {
+      .then(resp => {
         this.relatedItems.push({
           itemName: resp.name || resp.title
         });
       });
   }
-
-  getPaging() {
-    let paging = Array(this.totalPages)
-      .fill(0)
-      .map((item, index) => item = index + 1);
-
-    return paging;
-  }
-
-  click(page: number) {
-    console.log(page);
-  } 
 }

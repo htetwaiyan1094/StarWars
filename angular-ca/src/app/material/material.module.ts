@@ -1,13 +1,16 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatCardModule, MatIconModule, MatRippleModule, MatButtonModule } from '@angular/material';
+import { MatCardModule, MatIconModule, MatRippleModule, MatButtonModule, MatButtonToggleModule } from '@angular/material';
 import { OverlayModule } from '@angular/cdk/overlay';
 
 const MODULES = [
+  BrowserModule,
   MatCardModule,
   MatIconModule,
   MatRippleModule,
   OverlayModule,
-  MatButtonModule
+  MatButtonModule,
+  MatButtonToggleModule
 ]
 
 @NgModule({

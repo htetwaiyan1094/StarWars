@@ -11,8 +11,12 @@ export class SwServiceService {
   
   constructor(private client: HttpClient) { }
 
-  public getData(appendedUrl: String): Observable<any> {
-    return this.client.get(`${Consts.ROOT_URL}${appendedUrl}`);
+  public getData(appendedUrl: String): Promise<any> {
+    return this.client.get(`${Consts.ROOT_URL}${appendedUrl}`)
+      .toPromise()
+      .then(resp => {
+        return (resp);
+      });
   }
 }
 

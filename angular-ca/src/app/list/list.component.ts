@@ -9,34 +9,55 @@ import * as Consts from '../constants';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
+  category: string = '';
   itemList: any[];
+  totalPages: number = 0;
+  currentPage: number = 1;
 
   constructor(private route: ActivatedRoute, private swapi: SwServiceService, private ngZone: NgZone) {
-    console.log(this.route.snapshot.paramMap);
+    this.category = this.route.snapshot.paramMap.get('type');
+    this.currentPage = ( +this.route.snapshot.queryParamMap.get('page') ) || 1;
   }
 
   ngOnInit() {
-    this.getItemList(this.route.snapshot.paramMap.get('type'));
+    this.getItemList(this.category);
   }
 
   getItemList(category: string) {
-    this.swapi.getData(category)
-      .subscribe(resp => {
+    this.swapi.getData(`${category}?page=${this.currentPage}`)
+      .then(resp => {
+        this.totalPages = Math.ceil(resp.count / 10);
+
         resp.results.forEach(item => {
           let tempUrl = item['url']
-            .substring(0, (item['url'].length-1))
+            .substring(0, (item['url'].length - 1))
             .replace('people', 'characters');
 
           let tempImgUrl = tempUrl.replace(Consts.ROOT_URL, Consts.IMAGE_URL);
 
           item = Object.assign(item,
-            { 
-              imageUrl: `${ tempImgUrl }.jpg`,
-              link: `${ item['url'].replace(Consts.ROOT_URL, `${ location.origin }/sw/`) }`
+            {
+              imageUrl: `${tempImgUrl}.jpg`,
+              link: `${item['url'].replace(Consts.ROOT_URL, `${location.origin}/sw/`)}`
             }
           );
         });
         this.itemList = resp.results;
       });
+  }
+
+  getPaging() {
+    let paging = Array(this.totalPages)
+      .fill(0)
+      .map((item, index) => item = index + 1);
+
+    return paging;
+  }
+
+  click(page: number) {
+    let url = `${location.origin}/sw/${this.category}?page=${page}`;
+    window.history.pushState({path: url}, '', url);
+    this.currentPage = page;
+    this.getItemList(this.category);
   }
 }
