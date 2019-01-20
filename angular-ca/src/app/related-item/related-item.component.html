@@ -1,0 +1,13 @@
+<div *ngFor="let item of items | keyvalue" class="col-sm-12 col-md-6 col-lg-6 related-list">
+  <mat-card class="mat-elevation-z6">
+    <mat-card-title>{{ item.key | titlecase }}</mat-card-title>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <div *ngFor="let img of item.value" class="related-item">
+        <img [src]="img.imageUrl" onerror="this.src='./assets/placeholder-small.jpg'" />
+      </div>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-actions>footer</mat-card-actions>
+  </mat-card>
+</div>

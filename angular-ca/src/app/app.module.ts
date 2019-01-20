@@ -9,13 +9,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { SwServiceService } from './services/sw-service.service';
 import { ListComponent } from './list/list.component';
 import { MaterialModule } from './material/material.module';
+import { RelatedItemComponent } from './related-item/related-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     DetailComponent,
-    ListComponent
+    ListComponent,
+    RelatedItemComponent
   ],
   imports: [
     AppRoutingModule,

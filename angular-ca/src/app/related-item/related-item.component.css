@@ -1,0 +1,29 @@
+.related-list {
+    float: left;
+    height: 250px;
+}
+
+.related-item {
+    float: left;
+}
+
+.mat-card {
+  padding: 16px 0;
+  margin: 10px 2px;
+  height: calc(100% - 20px);
+}
+
+.mat-card-content {
+  padding: 0;
+  margin: 0;
+  height: calc(100% - 85px);
+  overflow-x: hidden;
+  overflow-y: clip;
+}
+
+img {
+    width: 52px;
+    height: 52px;
+    margin: 0 10px;
+    border-radius: 50%;
+}

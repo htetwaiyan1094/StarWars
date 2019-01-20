@@ -20,8 +20,9 @@ export class MainComponent implements OnInit {
   getCategories() {
     this.swapi.getData('')
       .then(resp => {
-        Object.keys(resp).forEach(key => { this.categories.set(key, resp[key].replace(ROOT_URL, '')) })
+        Object.keys(resp).forEach(key => {
+          this.categories.set(key, resp[key].replace(ROOT_URL, ''))
+        })
       });
-    console.log(this.categories);
   }
 }
