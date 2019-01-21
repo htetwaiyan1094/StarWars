@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: google;
+  src: url(assets/fonts/GoogleSans-Regular.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: starwars;
+  src: url(assets/fonts/starwars.ttf) format("opentype");
+}
+
+* {
+  font-family: 'google', 'arial', sans-serif !important;
+}
+
+.sw-font {
+  font-family: 'starwars', 'arial', sans-serif !important;
+}

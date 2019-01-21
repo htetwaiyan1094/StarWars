@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MatCardModule, MatIconModule, MatRippleModule, MatButtonModule,
-  MatButtonToggleModule, MatDividerModule } from '@angular/material';
+  MatButtonToggleModule, MatDividerModule, MatToolbarModule } from '@angular/material';
 import { OverlayModule } from '@angular/cdk/overlay';
 
 const MODULES = [
@@ -12,7 +12,8 @@ const MODULES = [
   OverlayModule,
   MatButtonModule,
   MatButtonToggleModule,
-  MatDividerModule
+  MatDividerModule,
+  MatToolbarModule
 ]
 
 @NgModule({

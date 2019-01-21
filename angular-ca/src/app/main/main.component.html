@@ -1,4 +1,8 @@
-<div *ngFor="let item of categories | keyvalue" style="display:block;">
-  {{ item.key }}
-  <a [routerLink]="item.value">click</a>
+<div *ngFor="let item of categories | keyvalue"
+class="col-xs-12 col-sm-12 col-md-4 col-lg-4"
+style="float: left;">
+  <a [routerLink]="item.value">
+    <img src="./assets/categories/{{item.key}}.jpg" />
+    <p class="category-label sw-font">{{ item.key }}</p>
+  </a>
 </div>

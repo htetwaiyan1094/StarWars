@@ -1,0 +1,18 @@
+a {
+  text-decoration: none;
+}
+
+img {
+  width: calc(100% - 14px);
+  height: auto;
+  margin: 7px;
+}
+
+.category-label {
+  margin: 7px;
+  padding: 3.5px;
+  margin-top: -10px;
+  background-color: black;
+  color: white;
+  font-size: 111%;
+}

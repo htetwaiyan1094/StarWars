@@ -1,20 +1,12 @@
 <mat-button-toggle-group name="paginator">
-  <mat-button-toggle *ngFor="let page of getPaging()" 
-  style="min-width:48px;" class="mat-primary"
-  (click)="click(page)">{{page}}</mat-button-toggle>
+  <mat-button-toggle *ngFor="let page of getPaging()"
+  class="mat-primary" (click)="click(page)">
+    {{page}}
+  </mat-button-toggle>
 </mat-button-toggle-group>
 
-<a routerLink="test">Testing</a>
 <div *ngFor="let item of itemList">
   <a href="{{item.link}}">
-    <img src="{{item.imageUrl}}" />
+    <img src="{{item.imageUrl}}" onerror="this.src='./assets/placeholder.jpg'" />
   </a>
 </div>
-
-<style scoped>
-  img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-  }
-</style>
