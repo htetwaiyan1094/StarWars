@@ -1,17 +1,14 @@
-a {
-  text-decoration: none;
-}
-
 img {
-  width: calc(100% - 14px);
+  width: calc(100% - 8px);
   height: auto;
-  margin: 7px;
+  margin: 15px 4px;
+  border-radius: inherit;
 }
 
 .category-label {
-  margin: 7px;
-  padding: 3.5px;
-  margin-top: -10px;
+  margin: 4px;
+  padding: 3.75px;
+  margin-top: -13px;
   background-color: black;
   color: white;
   font-size: 111%;

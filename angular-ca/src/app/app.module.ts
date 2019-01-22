@@ -10,6 +10,8 @@ import { SwServiceService } from './services/sw-service.service';
 import { ListComponent } from './list/list.component';
 import { MaterialModule } from './material/material.module';
 import { RelatedItemComponent } from './related-item/related-item.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { ToolbarComponent } from './toolbar/toolbar.component'
 
 @NgModule({
   declarations: [
@@ -17,13 +19,15 @@ import { RelatedItemComponent } from './related-item/related-item.component';
     MainComponent,
     DetailComponent,
     ListComponent,
-    RelatedItemComponent
+    RelatedItemComponent,
+    ToolbarComponent
   ],
   imports: [
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule
   ],
   providers: [SwServiceService],
   bootstrap: [AppComponent]

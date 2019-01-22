@@ -1,12 +1,21 @@
-<mat-button-toggle-group name="paginator">
-  <mat-button-toggle *ngFor="let page of getPaging()"
-  class="mat-primary" (click)="click(page)">
-    {{page}}
-  </mat-button-toggle>
-</mat-button-toggle-group>
-
-<div *ngFor="let item of itemList">
-  <a href="{{item.link}}">
-    <img src="{{item.imageUrl}}" onerror="this.src='./assets/placeholder.jpg'" />
-  </a>
+<div class="paginator-row my-3" *ngIf="shouldShowPaginator()">
+  <mat-button-toggle-group name="paginator">
+    <mat-button-toggle *ngFor="let page of getPaging()" class="mat-primary" (click)="click(page)">
+      {{page}}
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+</div>
+<div fxLayout="row wrap">
+  <div *ngFor="let item of itemList" class="non-block hvr-grow"
+    fxFlex.xs="50%" fxFlex.sm="50%" fxFlex.md="20%" fxFlex.lg="20%">
+    <a href="{{item.link}}">
+      <mat-card class="rounded-all list-card p-0">
+        <img src="{{item.imageUrl}}" onerror="this.src='./assets/placeholder.jpg'" />
+        <mat-divider></mat-divider>
+        <div class="list-card-label">
+          {{ item.name || item.title }}
+        </div>
+      </mat-card>
+    </a>
+  </div>
 </div>

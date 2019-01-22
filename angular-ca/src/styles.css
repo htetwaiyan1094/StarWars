@@ -16,3 +16,29 @@
 .sw-font {
   font-family: 'starwars', 'arial', sans-serif !important;
 }
+
+.sw-bold {
+  font-weight: bolder;
+}
+
+.non-block {
+  float: left;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.rounded-all {
+  border-radius: .7em;
+}
+
+.rounded-top {
+  border-top-left-radius: .7em;
+  border-top-right-radius: .7em;
+}
+
+.rounded-btm {
+  border-bottom-left-radius: calc(12px * .4);
+  border-bottom-right-radius: calc(12px * .4);
+}

@@ -26,7 +26,8 @@
               "src/styles.css",
               "src/app-theme.scss",
               "src/app/styles/bootstrap.min.css",
-              "src/app/styles/bootstrap-grid.min.css"
+              "src/app/styles/bootstrap-grid.min.css",
+              "src/app/styles/hover.min.css"
             ],
             "scripts": []
           },

@@ -16,7 +16,7 @@ export class ListComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private swapi: SwServiceService, private ngZone: NgZone) {
     this.category = this.route.snapshot.paramMap.get('type');
-    this.currentPage = ( +this.route.snapshot.queryParamMap.get('page') ) || 1;
+    this.currentPage = (+this.route.snapshot.queryParamMap.get('page')) || 1;
   }
 
   ngOnInit() {
@@ -54,9 +54,14 @@ export class ListComponent implements OnInit {
     return paging;
   }
 
+  shouldShowPaginator(): boolean {
+    let pages: number[] = this.getPaging();
+    return (pages[pages.length - 1]) > 1;
+  }
+
   click(page: number) {
     let url = `${location.origin}/sw/${this.category}?page=${page}`;
-    window.history.pushState({path: url}, '', url);
+    window.history.pushState({ path: url }, '', url);
     this.currentPage = page;
     this.getItemList(this.category);
   }

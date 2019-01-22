@@ -1,11 +1,32 @@
 img {
-  margin: 4px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
 }
 
 mat-button-toggle {
   min-width: 33px;
   height: 43px;
+}
+
+.paginator-row {
+  width: 100%;
+}
+
+.list-card {
+  margin: 11px;
+}
+
+.list-card-label {
+  height: 38px;
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  .list-card-label { font-size: 78%; }
+}
+
+@media screen and (max-width: 599px) {
+  .list-card-label { font-size: 78%; }
 }

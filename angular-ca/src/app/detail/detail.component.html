@@ -1,5 +1,15 @@
-<p *ngFor="let item of details | keyvalue">
-  {{ item.key | titlecase }} ___ {{ item.value | json }}
-</p>
+<mat-card class="m-3 p-0 mat-elevation-z6 detail-card rounded-all">
+  <div fxLayout="row wrap">
+    <div fxFlex="24%" fxFlex.sm="100%" fxFlex.xs="100%">
+      <img [src]="imageUrl" class="detail-img" onerror="this.src='./assets/placeholder.jpg'" />
+    </div>
+    <div fxFlex="76%" fxFlex.sm="100%" fxFlex.xs="100%" class="info-details">
+      <span class="detail-title">{{ title }}</span>
+      <div *ngFor="let item of infoMap | keyvalue">
+        <span class="sw-bold">{{ item.key | titlecase }}</span> : {{ item.value}}
+      </div>
+    </div>
+  </div>
+</mat-card>
 
 <app-related-item [items]="relatedItems"></app-related-item>

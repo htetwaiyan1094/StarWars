@@ -1,6 +1,6 @@
 .related-list {
     float: left;
-    height: 250px;
+    height: 250px !important;
 }
 
 .related-item {
@@ -16,14 +16,24 @@
 .mat-card-content {
   padding: 0;
   margin: 0;
-  height: calc(100% - 85px);
+  height: calc(100% - 20px);
   overflow-x: hidden;
   overflow-y: clip;
 }
 
 img {
-    width: 52px;
-    height: 52px;
-    margin: 0 10px;
+    width: 50px;
+    height: 50px;
+    margin: 4px 8px;
+    margin-top: 24px;
     border-radius: 50%;
+}
+
+@media screen and (max-width: 992px) {
+  .related-list { height: 100%; }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  .related-list { height: 100%; }
 }
