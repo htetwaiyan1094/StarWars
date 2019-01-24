@@ -74,7 +74,7 @@ export class DetailComponent implements OnInit {
               .substring(0, (resp.url.length - 1))
               .replace('people', 'characters')
               .replace(Consts.ROOT_URL, Consts.IMAGE_URL)}.jpg`,
-            link: resp.url.replace(Consts.ROOT_URL, `${location.origin}/sw/`)
+            link: resp.url.replace(Consts.ROOT_URL, `${location.origin}/StarWars/`)
           });
         }
         );

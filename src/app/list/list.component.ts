@@ -38,7 +38,7 @@ export class ListComponent implements OnInit {
           item = Object.assign(item,
             {
               imageUrl: `${tempImgUrl}.jpg`,
-              link: `${item['url'].replace(Consts.ROOT_URL, `${location.origin}/sw/`)}`
+              link: `${item['url'].replace(Consts.ROOT_URL, `${location.origin}/StarWars/`)}`
             }
           );
         });
@@ -60,7 +60,7 @@ export class ListComponent implements OnInit {
   }
 
   click(page: number) {
-    let url = `${location.origin}/sw/${this.category}?page=${page}`;
+    let url = `${location.origin}/StarWars/${this.category}?page=${page}`;
     window.history.pushState({ path: url }, '', url);
     this.currentPage = page;
     this.getItemList(this.category);
