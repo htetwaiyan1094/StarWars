@@ -9,7 +9,7 @@
       "urls": [
         "https://htetwaiyan1094.github.io/sw/favicon.ico",
         "https://htetwaiyan1094.github.io/sw/index.html",
-        "https://htetwaiyan1094.github.io/sw/main.22c6df6ff428e6c13902.js",
+        "https://htetwaiyan1094.github.io/sw/main.bd13564ba46a45c1c04c.js",
         "https://htetwaiyan1094.github.io/sw/polyfills.4c686a24ea7995742446.js",
         "https://htetwaiyan1094.github.io/sw/runtime.ec2944dd8b20ec099bf3.js",
         "https://htetwaiyan1094.github.io/sw/styles.e26afc3ecbb2cffd6989.css"
@@ -64,8 +64,8 @@
     "https://htetwaiyan1094.github.io/sw/assets/placeholder-small.jpg": "24ee9b754b463e3f324d6de2f08b2f37e5788bca",
     "https://htetwaiyan1094.github.io/sw/assets/placeholder.jpg": "5a77677f069aa7ad64dac7e7af9cd049fb951ec5",
     "https://htetwaiyan1094.github.io/sw/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "https://htetwaiyan1094.github.io/sw/index.html": "1a9e1cf5864414a438e20e47a748768f1109b6ee",
-    "https://htetwaiyan1094.github.io/sw/main.22c6df6ff428e6c13902.js": "6e63309e7360ea508843cd0c4d3576faad324705",
+    "https://htetwaiyan1094.github.io/sw/index.html": "b16a40e1ec45ef8f9b8fff5f279cb772e233425d",
+    "https://htetwaiyan1094.github.io/sw/main.bd13564ba46a45c1c04c.js": "85b3e71b308fbdca21ed4adf701ec141dc141854",
     "https://htetwaiyan1094.github.io/sw/polyfills.4c686a24ea7995742446.js": "4ab98e11e44c4bc97507dfc711f8420a47d6f18e",
     "https://htetwaiyan1094.github.io/sw/runtime.ec2944dd8b20ec099bf3.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
     "https://htetwaiyan1094.github.io/sw/styles.e26afc3ecbb2cffd6989.css": "d12f4c8b561cab13987174487c159d75f98df7d2"
