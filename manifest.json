@@ -1,11 +1,11 @@
 {
   "name": "Star Wars",
-  "short_name": "sw",
+  "short_name": "StarWars",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "/",
-  "start_url": "/sw/",
+  "start_url": "/StarWars/",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
