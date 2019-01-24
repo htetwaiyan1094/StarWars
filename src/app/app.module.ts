@@ -11,7 +11,9 @@ import { ListComponent } from './list/list.component';
 import { MaterialModule } from './material/material.module';
 import { RelatedItemComponent } from './related-item/related-item.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { ToolbarComponent } from './toolbar/toolbar.component'
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment'
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { ToolbarComponent } from './toolbar/toolbar.component'
     HttpClientModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [SwServiceService],
   bootstrap: [AppComponent]

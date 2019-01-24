@@ -9,7 +9,13 @@ export class ToolbarComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  goBack() {
+    window.history.back();
   }
 
+  home() {
+    location.href = `${location.origin}/sw/`;
+  }
 }

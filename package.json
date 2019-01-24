@@ -7,9 +7,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "publish": "ng build --prod --base-href https://htetwaiyan1094.github.io/ && angular-cli-ghpages --branch gh-pages"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~7.1.0",
     "@angular/cdk": "^7.2.1",
@@ -21,7 +22,9 @@
     "@angular/material": "^7.2.1",
     "@angular/platform-browser": "~7.1.0",
     "@angular/platform-browser-dynamic": "~7.1.0",
+    "@angular/pwa": "^0.12.3",
     "@angular/router": "~7.1.0",
+    "@angular/service-worker": "~7.1.0",
     "core-js": "^2.5.4",
     "ng2-swapi": "^1.0.0-rc.11",
     "rxjs": "~6.3.3",

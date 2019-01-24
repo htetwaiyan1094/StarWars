@@ -11,7 +11,9 @@ export class RelatedItemComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
+  isEmpty(list: any[]): boolean {
+    return list.length < 1;
+  }
 }
