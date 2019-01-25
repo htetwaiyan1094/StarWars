@@ -6,10 +6,11 @@ See [DEMO](https://htetwaiyan1094.github.io/StarWars/) here.
 ![](images/demo.png)
 
 ## Developed by
- > [Wint Yadanar Htet](https://github.com/wintydn)
 
- > *<wintydnhtet@gmail.com>*
+[Wint Yadanar Htet](https://github.com/wintydn)
 
- > [Htet Wai Yan](https://github.com/htetwaiyan1094)
+*<wintydnhtet@gmail.com>*
 
- > *<htetwaiyan1094@gmail.com>*
+[Htet Wai Yan](https://github.com/htetwaiyan1094)
+
+*<htetwaiyan1094@gmail.com>*
