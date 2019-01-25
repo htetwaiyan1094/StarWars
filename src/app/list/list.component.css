@@ -15,18 +15,21 @@ mat-button-toggle {
 }
 
 .list-card {
-  margin: 11px;
+  margin: .9vw;
 }
 
 .list-card-label {
-  height: 38px;
-  vertical-align: middle;
+  height: 48px;
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (min-width: 600px) and (max-width: 959px) {
   .list-card-label { font-size: 78%; }
+  .list-card { margin: 2.2vw; }
 }
 
 @media screen and (max-width: 599px) {
   .list-card-label { font-size: 78%; }
+  .list-card { margin: 2.2vw; }
 }

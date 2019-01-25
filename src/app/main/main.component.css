@@ -5,6 +5,11 @@ img {
   border-radius: inherit;
 }
 
+.category-list {
+  padding-left: .7vw;
+  padding-right: .7vw;
+}
+
 .category-label {
   margin: 4px;
   padding: 3.75px;
@@ -12,4 +17,18 @@ img {
   background-color: black;
   color: white;
   font-size: 111%;
+}
+
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  .category-list {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .category-list {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }

@@ -1,5 +1,5 @@
 <div *ngFor="let item of categories | keyvalue"
-class="col-xs-12 col-sm-12 col-md-4 col-lg-4 non-block hvr-grow">
+class="col-xs-12 col-sm-12 col-md-4 col-lg-4 non-block hvr-grow category-list">
   <a [routerLink]="item.value">
     <img src="./assets/categories/{{item.key}}.jpg" class="rounded-top" />
     <div class="category-label sw-font rounded-btm">{{ item.key }}</div>
