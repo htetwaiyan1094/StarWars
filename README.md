@@ -2,7 +2,7 @@
 ## PROJECT DETAILS
 
 - used Angular as front-end
-- [Star Wars API Link](https://swapi.co/) which provide data soruce for this project
+- [Star Wars API Link](https://swapi.co/) which provides data soruce for this project
 
 [See Developers](#developed-by)
 
