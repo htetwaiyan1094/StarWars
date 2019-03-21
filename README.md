@@ -4,7 +4,7 @@
 - used Angular as front-end
 - [Star Wars API Link](https://swapi.co/) which provide data soruce for this project
 
-[See Developers](#develop-by)
+[See Developers](#developed-by)
 
 See [DEMO](https://htetwaiyan1094.github.io/StarWars/) here.
 
