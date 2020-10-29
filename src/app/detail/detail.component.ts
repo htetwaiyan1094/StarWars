@@ -21,7 +21,6 @@ export class DetailComponent implements OnInit {
   ngOnInit() {
     const category = this.route.snapshot.paramMap.get('type');
     const id = this.route.snapshot.paramMap.get('id');
-
     this.getItemDetails(category, id)
       .then(data => {
         this.relatedItems = data;
@@ -53,7 +52,7 @@ export class DetailComponent implements OnInit {
             resp[prop]
           )
         );
-        console.log(this.infoMap);
+
         propNames.forEach(name => {
           if (resp[name]) result.set(name, this.getRelatedItems(resp[name]));
         });
@@ -74,12 +73,10 @@ export class DetailComponent implements OnInit {
               .substring(0, (resp.url.length - 1))
               .replace('people', 'characters')
               .replace(Consts.ROOT_URL, Consts.IMAGE_URL)}.jpg`,
-            link: resp.url.replace(Consts.ROOT_URL, `${location.origin}/StarWars/`)
+            link: resp.url.replace(Consts.ROOT_URL, `${location.origin}/`)
           });
-        }
-        );
-    }
-    );
+        });
+    });
     return result;
   }
 }

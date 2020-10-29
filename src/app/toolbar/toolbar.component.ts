@@ -16,6 +16,6 @@ export class ToolbarComponent implements OnInit {
   }
 
   home() {
-    location.href = `${location.origin}/StarWars/`;
+    location.href = `${location.origin}/`;
   }
 }

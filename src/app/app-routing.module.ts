@@ -8,7 +8,6 @@ const routes: Routes = [
   { path: '', component: MainComponent },
   { path: ':type', component: ListComponent },
   { path: ':type/:id', component: DetailComponent },
-  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({
